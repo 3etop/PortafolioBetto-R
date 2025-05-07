@@ -544,8 +544,6 @@ header .button-link{
     display: flex; /* Asegura que el contenido esté centrado */
     justify-content: center;
     align-items: center;
-    overflow: auto; /* Permite scroll si el contenido excede el tamaño */
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
 }
 
 .card-front img {
@@ -555,24 +553,17 @@ header .button-link{
 }
 
 .card-back {
-    position: fixed;
-    top: 20px;
-    left: -80px !important; /* Mueve más hacia la izquierda */
-    width: calc(100vw - 40px);
-    height: calc(100vh - 40px);
+    width: 270px; /* Reduce aún más el ancho */
+    height: 170px; /* Reduce aún más la altura */
     background-color: #000000;
     color: #ffffff;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* Gira la cara trasera */
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Divide en dos secciones */
     align-items: center;
-    flex-direction: column;
+    flex-direction: row; /* Alinea en fila */
     padding: 20px;
     gap: 20px;
-    overflow-y: auto;
-    box-sizing: border-box;
-    z-index: 9999;
-    margin: 0;
 }
 
 .card-back .left-section {
@@ -585,8 +576,8 @@ header .button-link{
 }
 
 .card-back .left-section img {
-    width: 100px; /* Reduce el tamaño de las imágenes */
-    height: auto;
+    width: 120px; /* Ancho fijo */
+    height: auto; /* Mantiene la proporción de la imagen */
     object-fit: cover;
 }
 
@@ -624,7 +615,7 @@ header .button-link{
 .card-back .right-section .links a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.5rem; /* Reduce el tamaño del texto */
+    font-size: 0.6rem;
     transition: color 0.3s ease;
 }
 
@@ -633,8 +624,8 @@ header .button-link{
 }
 
 .card-back .divider {
-    width: 2px; /* Reduce el ancho de la línea divisoria */
-    height: 80%; /* Ajusta la altura proporcionalmente */
+    width: 4px;
+    height: 100%;
     background-color: #ffffff;
     opacity: 0.5; /* Línea divisoria */
     position: relative;
@@ -666,55 +657,12 @@ h1 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border-radius: 0px;
+    border-radius: 20px;
     filter: drop-shadow(0px 4px 6px rgb(124, 120, 120)); /* Sombra de la página */
     max-height: calc(100vh - 120px); /* Asegura que no pase de 60px del top y bottom */
     overflow: hidden; /* Elimina la barra de scroll */
-    padding: 0px; /* Espacio interno */
+    padding: 20px; /* Espacio interno */
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
-}
-
-@media (max-width: 768px) {
-    .card {
-        width: 300px; /* Reduce el ancho para pantallas más pequeñas */
-        height: 150px; /* Reduce la altura */
-    }
-
-    .card-back {
-        width: 100%; /* Asegura que ocupe todo el ancho de la tarjeta */
-        height: 100%; /* Ajusta la altura */
-        flex-direction: column; /* Cambia a columna para mejor visualización */
-        padding: 10px; /* Reduce el padding */
-        gap: 10px; /* Reduce el espacio entre elementos */
-    }
-
-    .card-back .left-section img {
-        width: 80px; /* Reduce el tamaño de las imágenes */
-    }
-
-    .card-back .right-section .links a {
-        font-size: 0.5rem; /* Reduce el tamaño de los enlaces */
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        width: 250px; /* Ajusta aún más el ancho para pantallas muy pequeñas */
-        height: 120px; /* Ajusta la altura */
-    }
-
-    .card-back {
-        padding: 5px; /* Reduce aún más el padding */
-        gap: 5px; /* Reduce el espacio entre elementos */
-    }
-
-    .card-back .left-section img {
-        width: 60px; /* Ajusta el tamaño de las imágenes */
-    }
-
-    .card-back .right-section .links a {
-        font-size: 0.4rem; /* Ajusta el tamaño de los enlaces */
-    }
 }
 
 
