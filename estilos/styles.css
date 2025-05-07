@@ -117,7 +117,7 @@ header .button-link{
 
 /*Pagina-1________________________________________________________________________________*/
 
-.pagina-1, .pagina-2, .pagina-3, .pagina-4, .pagina-5 {
+.pagina-1, .pagina-2, .pagina-3, .pagina-4{
     margin: 60px; /* Mantiene el margen horizontal */
     display: flex;
     flex-direction: column;
@@ -199,6 +199,8 @@ header .button-link{
     margin: 60px; /* Espaciado externo */
     overflow: auto; /* Permite scroll si el contenido excede el espacio */
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    transform: scale(0.8); /* Reduce el tamaño del contenido al 80% */
+    transform-origin: center; /* Mantiene el contenido centrado al escalar */
 }
 
 /* Habilidades Grid */
@@ -206,7 +208,7 @@ header .button-link{
 .habilidades-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 3 columnas por defecto */
-    gap: 10px; /* Espacio entre las figuras */
+    gap: 5px; /* Reduce el espaciado entre las figuras */
     justify-items: center; /* Centra las figuras horizontalmente */
     align-items: center; /* Centra las figuras verticalmente */
     margin-top: 20px; /* Espaciado superior */
@@ -393,7 +395,7 @@ header .button-link{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(56, 19, 19, 0.836);
     border: none;
     padding: 15px;
     cursor: pointer;
@@ -514,14 +516,16 @@ header .button-link{
     align-items: center;
     height: 300px;
     margin-top: 20px;
+    margin-bottom: 30px; /* Espacio inferior */
 }
 
 .card {
-    width: 200px;
-    height: 300px;
+    width: 400px; /* Aumenta el ancho para hacerlo horizontal */
+    height: 200px; /* Reduce la altura */
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out;
+    
 }
 
 .card:hover {
@@ -534,32 +538,95 @@ header .button-link{
     width: 100%;
     height: 100%;
     backface-visibility: hidden; /* Oculta la cara trasera cuando no está visible */
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.card-front {
-    background-color: #ffffff;
-    display: flex;
+    display: flex; /* Asegura que el contenido esté centrado */
     justify-content: center;
     align-items: center;
 }
 
 .card-front img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+    width: 100%; /* La imagen ocupa todo el ancho de card-front */
+    height: 100%; /* La imagen ocupa toda la altura de card-front */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
 }
 
 .card-back {
+    width: 300px; /* Reduce aún más el ancho */
+    height: 170px; /* Reduce aún más la altura */
     background-color: #000000;
     color: #ffffff;
     transform: rotateY(180deg); /* Gira la cara trasera */
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Divide en dos secciones */
     align-items: center;
-    flex-direction: column;
-    padding: 10px;
+    flex-direction: row; /* Alinea en fila */
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-back .left-section {
+    position: relative; /* Habilita posicionamiento relativo para las imágenes */
+    display: flex;
+    flex-direction: column; /* Alinea las imágenes en columna */
+    justify-content: center; /* Centra las imágenes verticalmente */
+    align-items: center; /* Centra las imágenes horizontalmente */
+    height: 100%; /* Ocupa toda la altura de la sección */
+}
+
+.card-back .left-section img {
+    width: 120px; /* Ancho fijo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover;
+}
+
+.card-back .left-section img:first-child {
+    width: 120px; /* Reduce el ancho de la Imagen 1 */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover;
+}
+
+.card-back .left-section img:last-child {
+    width: 80px; /* Reduce el ancho de la Imagen 2 */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover;
+}
+
+.card-back .right-section {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    align-items: flex-start; /* Alinea los elementos hijos hacia la izquierda */
+}
+
+.card-back .right-section p {
+    margin: 5px 0; /* Espaciado entre textos */
+    text-align: center;
+}
+
+.card-back .right-section .links {
+    display: flex;
+    flex-direction: column; /* Cambia a columna para apilar los enlaces */
+    gap: 10px; /* Espaciado entre enlaces */
+    margin-top: 10px;
+    align-items: flex-start; /* Asegura que los enlaces se alineen a la izquierda */
+}
+
+.card-back .right-section .links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.6rem;
+    transition: color 0.3s ease;
+}
+
+.card-back .right-section .links a:hover {
+    color: #ff5722; /* Cambia de color al pasar el cursor */
+}
+
+.card-back .divider {
+    width: 4px;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.5; /* Línea divisoria */
+    position: relative;
+    left: -10px; /* Mueve la línea 20px hacia la izquierda */
 }
 
 .card-links {
@@ -575,6 +642,26 @@ header .button-link{
 
 .card-links a img:hover {
     transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+}
+
+h1 {
+    position: static; /* Asegura que los h1 sean estáticos en su posición */
+}
+
+.pagina-5 {
+    margin: 60px; /* Mantiene el margen horizontal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    filter: drop-shadow(0px 4px 6px rgb(124, 120, 120)); /* Sombra de la página */
+    max-height: calc(100vh - 120px); /* Asegura que no pase de 60px del top y bottom */
+    margin-top: 60px; /* Espacio desde el borde superior */
+    margin-bottom: 60px; /* Espacio desde el borde inferior */
+    overflow: auto; /* Permite scroll si el contenido excede el espacio */
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */ 
 }
 
 
