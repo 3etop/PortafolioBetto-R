@@ -199,8 +199,6 @@ header .button-link{
     margin: 60px; /* Espaciado externo */
     overflow: auto; /* Permite scroll si el contenido excede el espacio */
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
-    transform: scale(0.8); /* Reduce el tamaño del contenido al 80% */
-    transform-origin: center; /* Mantiene el contenido centrado al escalar */
 }
 
 /* Habilidades Grid */
@@ -208,7 +206,7 @@ header .button-link{
 .habilidades-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 3 columnas por defecto */
-    gap: 5px; /* Reduce el espaciado entre las figuras */
+    gap: 10px; /* Espacio entre las figuras */
     justify-items: center; /* Centra las figuras horizontalmente */
     align-items: center; /* Centra las figuras verticalmente */
     margin-top: 20px; /* Espaciado superior */
@@ -395,7 +393,7 @@ header .button-link{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(56, 19, 19, 0.836);
+    background-color: rgba(56, 19, 19, 0.7);
     border: none;
     padding: 15px;
     cursor: pointer;
@@ -510,9 +508,6 @@ header .button-link{
 
 /* Estilos para la tarjeta interactiva */
 .card-container {
-    margin-left: -80px !important;
-    margin-right: 80px !important; /* Elimina el margen lateral */
-    margin-top: 20px; /* Espacio superior */
     perspective: 1000px; /* Añade perspectiva para el efecto 3D */
     display: flex;
     justify-content: center;
