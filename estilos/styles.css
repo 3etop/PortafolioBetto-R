@@ -548,8 +548,8 @@ header .button-link{
 }
 
 .card-back {
-    width: 300px; /* Reduce aún más el ancho */
-    height: 170px; /* Reduce aún más la altura */
+    width: 270px; /* Reduce el ancho original (300px - 30px) */
+    height: 140px; /* Reduce la altura original (170px - 30px) */
     background-color: #000000;
     color: #ffffff;
     transform: rotateY(180deg); /* Gira la cara trasera */
@@ -557,8 +557,9 @@ header .button-link{
     justify-content: space-between; /* Divide en dos secciones */
     align-items: center;
     flex-direction: row; /* Alinea en fila */
-    padding: 20px;
-    gap: 20px;
+    padding: 15px; /* Ajusta el padding para mantener proporción */
+    gap: 15px; /* Ajusta el espacio entre elementos */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
 }
 
 .card-back .left-section {
@@ -571,7 +572,7 @@ header .button-link{
 }
 
 .card-back .left-section img {
-    width: 120px; /* Ancho fijo */
+    width: 100px; /* Reduce el tamaño de las imágenes proporcionalmente */
     height: auto; /* Mantiene la proporción de la imagen */
     object-fit: cover;
 }
@@ -610,7 +611,7 @@ header .button-link{
 .card-back .right-section .links a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.6rem;
+    font-size: 0.5rem; /* Reduce el tamaño del texto */
     transition: color 0.3s ease;
 }
 
@@ -619,8 +620,8 @@ header .button-link{
 }
 
 .card-back .divider {
-    width: 4px;
-    height: 100%;
+    width: 3px; /* Ajusta el ancho de la línea divisoria */
+    height: 90%; /* Ajusta la altura proporcionalmente */
     background-color: #ffffff;
     opacity: 0.5; /* Línea divisoria */
     position: relative;
