@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             el: '.swiper-pagination',
             clickable: true,
         },
-        loop: false, // Deshabilitar el loop para evitar que sea infinito
+        loop: true, // Deshabilitar el loop para evitar que sea infinito
     });
 
     const carouselImages = document.querySelector('.carousel-images');
