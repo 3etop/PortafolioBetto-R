@@ -510,6 +510,9 @@ header .button-link{
 
 /* Estilos para la tarjeta interactiva */
 .card-container {
+    margin-left: -80px !important;
+    margin-right: -80px !important; /* Elimina el margen lateral */
+    margin-top: 20px; /* Espacio superior */
     perspective: 1000px; /* Añade perspectiva para el efecto 3D */
     display: flex;
     justify-content: center;
@@ -550,7 +553,7 @@ header .button-link{
 }
 
 .card-back {
-    width: 300px; /* Reduce aún más el ancho */
+    width: 270px; /* Reduce aún más el ancho */
     height: 170px; /* Reduce aún más la altura */
     background-color: #000000;
     color: #ffffff;
@@ -659,7 +662,7 @@ h1 {
     max-height: calc(100vh - 120px); /* Asegura que no pase de 60px del top y bottom */
     margin-top: 60px; /* Espacio desde el borde superior */
     margin-bottom: 60px; /* Espacio desde el borde inferior */
-    overflow: auto; /* Permite scroll si el contenido excede el espacio */
+    overflow: hidden; /* Elimina la barra de scroll */
     padding: 20px; /* Espacio interno */
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */ 
 }
