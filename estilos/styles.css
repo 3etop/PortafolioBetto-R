@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../Image/backgraund/back\ N_11zon.webp'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%; /* Cambiar a 100% para evitar barras de scroll horizontales */
+    height: 100%; /* Cambiar a 100% para evitar barras de scroll verticales */
+    overflow: hidden; /* Eliminar cualquier barra de scroll */
+}
+
+/*eader___________________________________________________*/
+
+header {
+    background-color: #000000;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.651); 
+    padding: 2px 0;
+    text-align: center;
+}
+
+header .logo{
+    width: 100px; /* Ajustar el tamaño de la imagen del logo */
+    height: auto;
+    margin: 0 auto; /* Centrar la imagen del logo */
+    display: block; /* Asegura que la imagen esté en bloque para centrarla */
+}
+
+header .button-link{
+    position: absolute;
+    top: 12px; /* Ajustar la posición vertical del botón */
+    right: 12px; /* Ajustar la posición horizontal del botón */
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 10px 10px;
+    color: #000000;
+    background-color: #ffffff; /* Color de fondo del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    filter: drop-shadow(0px 4px 6px rgba(224, 218, 218, 0.562)); /* Sombra del botón */
+}
+
+/*Swipper_____________________________________________________________________________________*/
+
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    padding: 0px 0px; /* Espacio a los lados */
+    overflow: hidden; /* Evita que el contenido se pase a otra página */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
+
+.swiper-slide {
+    width: 100vw; /* Asegura que cada página ocupe el ancho completo de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+}
+
+.swiper-pagination-bullet {
+    background: #fff;
+}
+
+.custom-next,
+.custom-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.custom-next {
+    right: 10px;
+    background-image: url('../Image/Imagenes/deslizar-hacia-la-derecha_15_11zon.webp'); /* Ruta de la imagen del botón "siguiente" */
+}
+
+.custom-prev {
+    left: 10px;
+    background-image: url('../Image/Imagenes/deslizar-hacia-la-izquierda_16_11zon.webp'); /* Ruta de la imagen del botón "anterior" */
+}
+
+/* Estilos personalizados para la paginación */
+.swiper-pagination {
+    bottom: 10px !important; /* Ajusta la posición vertical */
+    text-align: center !important; /* Centra la paginación */
+}
+
+.swiper-pagination-bullet {
+    width: 12px !important; /* Ancho de los puntos */
+    height: 12px !important; /* Altura de los puntos */
+    background: #ffffff !important; /* Color de los puntos */
+    opacity: 0.7 !important; /* Transparencia de los puntos */
+    transition: opacity 0.3s, transform 0.3s !important; /* Animación al interactuar */
+}
+
+.swiper-pagination-bullet-active {
+    background: #000000 !important; /* Color del punto activo */
+    opacity: 1 !important; /* Opacidad completa para el punto activo */
+    transform: scale(1.5) !important; /* Aumenta el tamaño del punto activo */
+}
+
+/*Pagina-1________________________________________________________________________________*/
+
+.pagina-1 {
+    margin: 60px; /* Mantiene el margen horizontal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #0000008f;
+    border-radius: 20px;
+    filter: drop-shadow(0px 4px 6px rgba(37, 33, 33, 0.651)); /* Sombra de la página */
+    max-height: calc(100vh - 120px); /* Asegura que no pase de 60px del top y bottom */
+    margin-top: 60px; /* Espacio desde el borde superior */
+    margin-bottom: 60px; /* Espacio desde el borde inferior */
+    overflow: auto; /* Permite scroll si el contenido excede el espacio */
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    
+}
+
+.imagen-presentacion{
+    width: clamp(100px, 20vw, 300px);
+    height: auto;
+    margin: 0 auto; /* Centrar la imagen */
+    display: block; /* Asegura que la imagen esté en bloque para centrarla */
+    border-radius: 20px; /* Bordes redondeados de la imagen */
+    filter: drop-shadow(0px 4px 6px rgba(221, 216, 216, 0.651)); /* Sombra de la imagen */
+}
