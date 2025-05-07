@@ -652,7 +652,7 @@ h1 {
 }
 
 .pagina-5 {
-    margin: 60px; /* Mantiene el margen horizontal */
+    margin: auto; /* Centra la tarjeta horizontal y verticalmente */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -660,11 +660,9 @@ h1 {
     border-radius: 20px;
     filter: drop-shadow(0px 4px 6px rgb(124, 120, 120)); /* Sombra de la página */
     max-height: calc(100vh - 120px); /* Asegura que no pase de 60px del top y bottom */
-    margin-top: 60px; /* Espacio desde el borde superior */
-    margin-bottom: 60px; /* Espacio desde el borde inferior */
     overflow: hidden; /* Elimina la barra de scroll */
     padding: 20px; /* Espacio interno */
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */ 
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
 }
 
 
