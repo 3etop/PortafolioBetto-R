@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('../Image/backgraund/back\ N_11zon.webp'); /* Ruta de la imagen de fondo */
+    background-image: url('../Image/backgraund/Nuevo\ background.png'); /* Ruta de la imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -13,6 +13,7 @@ body {
 /*eader___________________________________________________*/
 
 header {
+    position: relative;
     background-color: #000000;
     box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.651); 
     padding: 2px 0;
@@ -28,8 +29,8 @@ header .logo{
 
 header .button-link{
     position: absolute;
-    top: 12px; /* Ajustar la posición vertical del botón */
-    right: 12px; /* Ajustar la posición horizontal del botón */
+    top: 10px; /* Ajustar la posición vertical del botón */
+    right: 10px; /* Ajustar la posición horizontal del botón */
     font-size: 1rem;
     text-decoration: none;
     padding: 10px 10px;
@@ -37,6 +38,29 @@ header .button-link{
     background-color: #ffffff; /* Color de fondo del botón */
     border-radius: 5px; /* Bordes redondeados del botón */
     filter: drop-shadow(0px 4px 6px rgba(224, 218, 218, 0.562)); /* Sombra del botón */
+}
+
+header .whatsapp-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #25d366;
+    color: #fff !important;
+    font-size: 1.4rem; /* Tamaño de ícono más pequeño */
+    border-radius: 50%;
+    padding: 6px 8px;   /* Padding reducido */
+    box-shadow: 0 2px 6px rgba(37, 211, 102, 0.3);
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+    text-decoration: none;
+}
+header .whatsapp-icon:hover {
+    background: #128c7e;
+    transform: scale(1.1);
+    color: #fff;
 }
 
 /*Swipper_____________________________________________________________________________________*/
